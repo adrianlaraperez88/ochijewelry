@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.ochijewelry.com/</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ochijewelry.com/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ochijewelry.com/?lang=en"/>
+  </url>
+  <!-- Collections Page -->
+  <url>
+    <loc>https://www.ochijewelry.com/collections</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ochijewelry.com/collections?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ochijewelry.com/collections?lang=en"/>
+  </url>
+  <!-- Services Page -->
+  <url>
+    <loc>https://www.ochijewelry.com/services</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ochijewelry.com/services?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ochijewelry.com/services?lang=en"/>
+  </url>
+  <!-- About Page -->
+  <url>
+    <loc>https://www.ochijewelry.com/about</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ochijewelry.com/about?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ochijewelry.com/about?lang=en"/>
+  </url>
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.ochijewelry.com/contact</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ochijewelry.com/contact?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ochijewelry.com/contact?lang=en"/>
+  </url>
+</urlset>
