@@ -8,7 +8,7 @@ import { provideTranslateService } from '@ngx-translate/core';
 import { routes } from './app.routes';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 
 export const appConfig: ApplicationConfig = {

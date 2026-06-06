@@ -13,7 +13,7 @@
 
     <!-- Promo Banner (full-width top) -->
     <div class="promo-banner">
-      <img ngSrc="/assets/images/promo-banner.png" alt="Ofertas especiales" width="1024" height="1024" />
+      <img ngSrc="assets/images/promo-banner.png" alt="Ofertas especiales" width="1024" height="1024" />
       <div class="banner-overlay">
         <div class="banner-content">
           <span class="banner-badge">🔥 {{ 'promo.badge_limited' | translate }}</span>
@@ -32,7 +32,7 @@
         <div class="promo-card" [style.animation-delay]="(i * 0.1) + 's'">
           <!-- Image -->
           <div class="promo-img-wrap">
-            <img [ngSrc]="'/assets/images/' + promo.img" [alt]="promo.key" width="1024" height="1024" />
+            <img [ngSrc]="'assets/images/' + promo.img" [alt]="promo.key" width="1024" height="1024" />
             <div class="promo-badge">{{ 'promo.' + promo.badge | translate }}</div>
             <div class="promo-discount">{{ 'promo.items.' + promo.key + '.discount' | translate }}</div>
           </div>

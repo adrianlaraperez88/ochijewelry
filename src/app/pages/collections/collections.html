@@ -1,7 +1,7 @@
 <!-- Page Header -->
 <section class="page-hero">
   <div class="page-hero-bg">
-    <img ngSrc="/assets/images/chains.png" alt="Collections" fill priority style="object-fit: cover;" />
+    <img ngSrc="assets/images/chains.png" alt="Collections" fill priority style="object-fit: cover;" />
     <div class="page-hero-overlay"></div>
   </div>
   <div class="container page-hero-content">
@@ -19,7 +19,7 @@
       @for (cat of categories; track cat.key; let i = $index) {
         <div class="collection-card glass-card" [class.featured]="i === 2" [style.animation-delay]="(i * 0.1) + 's'">
           <div class="card-image">
-            <img [ngSrc]="'/assets/images/' + cat.img" [alt]="cat.key" width="1024" height="1024" />
+            <img [ngSrc]="'assets/images/' + cat.img" [alt]="cat.key" width="1024" height="1024" />
             <div class="card-overlay"></div>
             <div class="card-icon">{{ cat.icon }}</div>
           </div>
@@ -47,7 +47,7 @@
       <p>{{ 'collections.items.custom.desc' | translate }}</p>
     </div>
     <div class="custom-image">
-      <img ngSrc="/assets/images/custom.png" alt="Custom Jewelry" width="1024" height="1024" />
+      <img ngSrc="assets/images/custom.png" alt="Custom Jewelry" width="1024" height="1024" />
     </div>
   </div>
 </section>
