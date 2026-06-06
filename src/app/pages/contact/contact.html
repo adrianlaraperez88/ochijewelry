@@ -104,15 +104,18 @@
         </div>
       </div>
 
-      <!-- Map placeholder -->
-      <div class="map-placeholder glass-card">
-        <div class="map-inner">
-          <span class="map-icon">🗺️</span>
-          <p>{{ 'contact.info.address' | translate }}</p>
-          <a [href]="'https://www.google.com/maps/search/?api=1&query=' + ('contact.info.address' | translate)" target="_blank" class="btn-outline" style="margin-top: 1rem; display: inline-flex;">
-            Get Directions →
-          </a>
-        </div>
+      <!-- Interactive Google Map -->
+      <div class="map-container glass-card">
+        <iframe
+          src="https://maps.google.com/maps?q=2800%20Hikes%20Ln,%20Louisville,%20KY%2040218&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ochi Jewelry Map Location">
+        </iframe>
       </div>
     </div>
 

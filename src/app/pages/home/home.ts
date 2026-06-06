@@ -73,6 +73,37 @@ export class HomeComponent implements OnInit {
           'latitude': 38.2045,
           'longitude': -85.6728
         },
+        'aggregateRating': {
+          '@type': 'AggregateRating',
+          'ratingValue': '4.9',
+          'reviewCount': '128'
+        },
+        'review': [
+          {
+            '@type': 'Review',
+            'author': {
+              '@type': 'Person',
+              'name': 'Sophia Rodriguez'
+            },
+            'reviewRating': {
+              '@type': 'Rating',
+              'ratingValue': '5'
+            },
+            'reviewBody': 'La mejor joyería de la zona. Ajustaron mi anillo de compromiso en menos de una hora. El trabajo fue impecable y el trato muy profesional.'
+          },
+          {
+            '@type': 'Review',
+            'author': {
+              '@type': 'Person',
+              'name': 'Alexander Silva'
+            },
+            'reviewRating': {
+              '@type': 'Rating',
+              'ratingValue': '5'
+            },
+            'reviewBody': 'Encargué una cadena de oro personalizada y superó todas mis expectativas. La atención al detalle en el taller es realmente excepcional.'
+          }
+        ],
         'openingHoursSpecification': [
           {
             '@type': 'OpeningHoursSpecification',

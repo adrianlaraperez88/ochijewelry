@@ -37,17 +37,122 @@
   </div>
 </section>
 
-<!-- Custom Order Banner -->
-<section class="custom-banner section">
-  <div class="container custom-banner-inner">
-    <div class="custom-text">
-      <span class="section-label">✦ Bespoke Service ✦</span>
-      <h2>{{ 'collections.items.custom.name' | translate }}</h2>
-      <div class="gold-divider"></div>
-      <p>{{ 'collections.items.custom.desc' | translate }}</p>
+<!-- Bespoke Customizer Section -->
+<section class="customizer-section section">
+  <div class="container customizer-inner glass-card">
+    
+    <!-- Customizer Header -->
+    <div class="customizer-header">
+      <span class="section-label">✦ {{ 'customizer.title' | translate }} ✦</span>
+      <h2>{{ 'customizer.title' | translate }}</h2>
+      <p>{{ 'customizer.subtitle' | translate }}</p>
+
+      <!-- Progress indicator -->
+      <div class="progress-container">
+        <span class="progress-text">{{ 'customizer.step' | translate }} {{ customizerStep() }} {{ 'customizer.of' | translate }} 4</span>
+        <div class="progress-bar">
+          <div class="progress-fill" [style.width]="(customizerStep() * 25) + '%'"></div>
+        </div>
+      </div>
     </div>
-    <div class="custom-image">
-      <img ngSrc="assets/images/custom.webp" alt="Custom Jewelry" width="1024" height="1024" />
-    </div>
+
+    <!-- Step 1: Select Category -->
+    @if (customizerStep() === 1) {
+      <div class="step-content animate-fade">
+        <h3>{{ 'customizer.steps.1.title' | translate }}</h3>
+        <p class="step-desc">{{ 'customizer.steps.1.desc' | translate }}</p>
+        
+        <div class="options-grid categories-grid">
+          @for (cat of categories; track cat.key) {
+            <button class="option-btn category-btn glass-card" (click)="selectCategory(cat.key)">
+              <span class="opt-icon">{{ cat.icon }}</span>
+              <span class="opt-label">{{ 'collections.items.' + cat.key + '.name' | translate }}</span>
+            </button>
+          }
+        </div>
+      </div>
+    }
+
+    <!-- Step 2: Select Metal -->
+    @if (customizerStep() === 2) {
+      <div class="step-content animate-fade">
+        <h3>{{ 'customizer.steps.2.title' | translate }}</h3>
+        <p class="step-desc">{{ 'customizer.steps.2.desc' | translate }}</p>
+
+        <div class="options-grid metals-grid">
+          @for (metal of metalOptions; track metal) {
+            <button class="option-btn metal-btn glass-card" (click)="selectMetal(metal)">
+              <div class="metal-swatch" [class]="metal"></div>
+              <span class="opt-label">{{ 'customizer.metals.' + metal | translate }}</span>
+            </button>
+          }
+        </div>
+      </div>
+    }
+
+    <!-- Step 3: Select Stone -->
+    @if (customizerStep() === 3) {
+      <div class="step-content animate-fade">
+        <h3>{{ 'customizer.steps.3.title' | translate }}</h3>
+        <p class="step-desc">{{ 'customizer.steps.3.desc' | translate }}</p>
+
+        <div class="options-grid stones-grid">
+          @for (stone of stoneOptions; track stone) {
+            <button class="option-btn stone-btn glass-card" (click)="selectStone(stone)">
+              <span class="opt-icon">
+                @if (stone === 'diamond') { 💎 }
+                @else if (stone === 'emerald') { 💚 }
+                @else if (stone === 'ruby') { ❤️ }
+                @else if (stone === 'sapphire') { 💙 }
+                @else { ✨ }
+              </span>
+              <span class="opt-label">{{ 'customizer.stones.' + stone | translate }}</span>
+            </button>
+          }
+        </div>
+      </div>
+    }
+
+    <!-- Step 4: Summary & CTA -->
+    @if (customizerStep() === 4) {
+      <div class="step-content summary-content animate-fade">
+        <h3>{{ 'customizer.steps.4.title' | translate }}</h3>
+        <p class="step-desc">{{ 'customizer.steps.4.desc' | translate }}</p>
+
+        <div class="recipe-box glass-card">
+          <div class="recipe-item">
+            <span>Categoría / Category</span>
+            <strong>{{ 'collections.items.' + selectedCategory() + '.name' | translate }}</strong>
+          </div>
+          <div class="recipe-item">
+            <span>Metal Precioso / Metal</span>
+            <strong>{{ 'customizer.metals.' + selectedMetal() | translate }}</strong>
+          </div>
+          <div class="recipe-item">
+            <span>Gema Principal / Gemstone</span>
+            <strong>{{ 'customizer.stones.' + selectedStone() | translate }}</strong>
+          </div>
+        </div>
+
+        <div class="summary-actions">
+          <a [href]="getWhatsAppLink()" target="_blank" class="btn-primary customizer-submit">
+            💬 {{ 'customizer.cta' | translate }}
+          </a>
+          <button (click)="resetCustomizer()" class="btn-outline">
+            🔄 {{ 'customizer.reset' | translate }}
+          </button>
+        </div>
+      </div>
+    }
+
+    <!-- Global Controls -->
+    @if (customizerStep() > 1 && customizerStep() < 4) {
+      <div class="customizer-controls">
+        <button (click)="prevStep()" class="btn-outline">
+          ← {{ 'customizer.prev' | translate }}
+        </button>
+      </div>
+    }
+
   </div>
 </section>

@@ -149,3 +149,28 @@
   </div>
 </section>
 }
+
+<!-- ─── TESTIMONIALS ──────────────────────────────────────────────────────── -->
+<section class="testimonials-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">✦ {{ 'testimonials.title' | translate }} ✦</span>
+      <h2>{{ 'testimonials.title' | translate }}</h2>
+      <div class="gold-divider"></div>
+      <p>{{ 'testimonials.subtitle' | translate }}</p>
+    </div>
+
+    <div class="testimonials-grid">
+      @for (item of [0, 1, 2]; track item) {
+        <div class="testimonial-card glass-card" [style.animation-delay]="(item * 0.12) + 's'">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"{{ 'testimonials.items.' + item + '.text' | translate }}"</p>
+          <div class="testimonial-footer">
+            <h4>{{ 'testimonials.items.' + item + '.name' | translate }}</h4>
+            <span>{{ 'testimonials.items.' + item + '.role' | translate }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

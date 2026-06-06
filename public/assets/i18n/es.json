@@ -243,6 +243,68 @@
       "desc": "Más de 15 años sirviendo a nuestra comunidad."
     }
   },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Clientes",
+    "subtitle": "Opiniones reales de clientes satisfechos con nuestros servicios y piezas de joyería",
+    "items": [
+      {
+        "name": "Sofía Rodríguez",
+        "role": "Cliente Satisfecho",
+        "text": "La mejor joyería de la zona. Ajustaron mi anillo de compromiso en menos de una hora. El trabajo fue impecable y el trato muy profesional."
+      },
+      {
+        "name": "Alejandro Silva",
+        "role": "Diseño Personalizado",
+        "text": "Encargué una cadena de oro personalizada y superó todas mis expectativas. La atención al detalle en el taller es realmente excepcional."
+      },
+      {
+        "name": "Elena Gómez",
+        "role": "Restauración de Herencia",
+        "text": "El servicio de baño de oro y pulido devolvió a la vida una pulsera antigua de mi abuela. Tienen una rapidez increíble y precios muy justos."
+      }
+    ]
+  },
+  "customizer": {
+    "title": "Diseño a la Medida",
+    "subtitle": "Crea una pieza única adaptada a tu visión. Completa los pasos y solicita una consulta por WhatsApp.",
+    "step": "Paso",
+    "of": "de",
+    "prev": "Atrás",
+    "reset": "Reiniciar",
+    "cta": "Enviar Solicitud por WhatsApp",
+    "steps": {
+      "1": {
+        "title": "Elige la categoría de tu joya",
+        "desc": "¿Qué tipo de pieza deseas crear?"
+      },
+      "2": {
+        "title": "Selecciona el metal precioso",
+        "desc": "El metal es la base y alma de tu joya"
+      },
+      "3": {
+        "title": "Elige la gema principal",
+        "desc": "Añade color y brillo eterno"
+      },
+      "4": {
+        "title": "Tu Diseño Personalizado",
+        "desc": "Revisa los detalles y solicita una consulta gratuita con nuestro maestro joyero."
+      }
+    },
+    "metals": {
+      "gold_18k": "Oro Amarillo 18K",
+      "white_gold": "Oro Blanco 18K",
+      "rose_gold": "Oro Rosado 18K",
+      "platinum": "Platino Premium",
+      "silver": "Plata de Ley .925"
+    },
+    "stones": {
+      "diamond": "Diamante Certificado",
+      "emerald": "Esmeralda Colombiana",
+      "ruby": "Rubí Natural",
+      "sapphire": "Zafiro Azul",
+      "none": "Sin Piedras (Metal Único)"
+    }
+  },
   "seo": {
     "home": {
       "title": "Joyería Fina y Reparaciones de Relojes y Joyas",

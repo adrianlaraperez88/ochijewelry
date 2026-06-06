@@ -243,6 +243,68 @@
       "desc": "15+ years serving our community."
     }
   },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Real feedback from clients delighted with our custom designs and repair services",
+    "items": [
+      {
+        "name": "Sophia Rodriguez",
+        "role": "Satisfied Customer",
+        "text": "The absolute best jewelry store. They resized my engagement ring in under an hour. The work was flawless and the staff was very professional."
+      },
+      {
+        "name": "Alexander Silva",
+        "role": "Custom Design",
+        "text": "I ordered a bespoke gold chain and it exceeded all my expectations. The level of craftsmanship and detail is truly outstanding."
+      },
+      {
+        "name": "Elena Gomez",
+        "role": "Heirloom Restoration",
+        "text": "The gold plating and polishing service breathed new life into my grandmother's old bracelet. Fast turnaround and fair pricing."
+      }
+    ]
+  },
+  "customizer": {
+    "title": "Bespoke & Custom Jewelry",
+    "subtitle": "Create a unique piece tailored to your vision. Follow the steps to request a quote on WhatsApp.",
+    "step": "Step",
+    "of": "of",
+    "prev": "Back",
+    "reset": "Reset",
+    "cta": "Send Quote Request via WhatsApp",
+    "steps": {
+      "1": {
+        "title": "Select your jewelry category",
+        "desc": "What type of piece would you like to create?"
+      },
+      "2": {
+        "title": "Choose the precious metal",
+        "desc": "The metal forms the canvas of your piece"
+      },
+      "3": {
+        "title": "Select the primary gemstone",
+        "desc": "Add color and eternal sparkle"
+      },
+      "4": {
+        "title": "Your Custom Design Summary",
+        "desc": "Review the details and request a free consultation with our master jeweler."
+      }
+    },
+    "metals": {
+      "gold_18k": "18K Yellow Gold",
+      "white_gold": "18K White Gold",
+      "rose_gold": "18K Rose Gold",
+      "platinum": "Premium Platinum",
+      "silver": "Sterling Silver .925"
+    },
+    "stones": {
+      "diamond": "Certified Diamond",
+      "emerald": "Colombian Emerald",
+      "ruby": "Natural Ruby",
+      "sapphire": "Blue Sapphire",
+      "none": "No Gemstones (Metal Only)"
+    }
+  },
   "seo": {
     "home": {
       "title": "Fine Jewelry & Expert Repair Services",
