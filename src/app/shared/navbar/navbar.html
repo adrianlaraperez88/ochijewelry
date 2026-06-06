@@ -1,0 +1,57 @@
+<nav class="navbar" [class.scrolled]="isScrolled()">
+  <div class="container nav-inner">
+
+    <!-- Logo -->
+    <a routerLink="/" class="logo" (click)="closeMenu()">
+      <img ngSrc="/assets/images/logo.png" alt="Ochi Jewelry" class="logo-img" width="36" height="36" priority />
+      <span class="logo-text">Ochi <em>Jewelry</em></span>
+    </a>
+
+    <!-- Desktop Links -->
+    <ul class="nav-links">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{ 'nav.home' | translate
+          }}</a></li>
+      @if (ff.isEnabled('showCollections')) {
+        <li><a routerLink="/collections" routerLinkActive="active">{{ 'nav.collections' | translate }}</a></li>
+      }
+      <li><a routerLink="/services" routerLinkActive="active">{{ 'nav.services' | translate }}</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">{{ 'nav.about' | translate }}</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">{{ 'nav.contact' | translate }}</a></li>
+    </ul>
+
+    <!-- Right Controls -->
+    <div class="nav-controls">
+      <!-- Language switcher -->
+      <div class="lang-switcher">
+        <button [class.active]="currentLang() === 'en'" (click)="switchLang('en')">EN</button>
+        <span class="divider">|</span>
+        <button [class.active]="currentLang() === 'es'" (click)="switchLang('es')">ES</button>
+      </div>
+
+      <!-- CTA -->
+      <a routerLink="/contact" class="btn-primary btn-sm">{{ 'nav.contact' | translate }}</a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" [class.open]="menuOpen()" (click)="toggleMenu()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.open]="menuOpen()">
+    <ul>
+      <li><a routerLink="/" (click)="closeMenu()">{{ 'nav.home' | translate }}</a></li>
+      @if (ff.isEnabled('showCollections')) {
+        <li><a routerLink="/collections" (click)="closeMenu()">{{ 'nav.collections' | translate }}</a></li>
+      }
+      <li><a routerLink="/services" (click)="closeMenu()">{{ 'nav.services' | translate }}</a></li>
+      <li><a routerLink="/about" (click)="closeMenu()">{{ 'nav.about' | translate }}</a></li>
+      <li><a routerLink="/contact" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a></li>
+    </ul>
+    <div class="mobile-lang">
+      <button [class.active]="currentLang() === 'en'" (click)="switchLang('en')">English</button>
+      <button [class.active]="currentLang() === 'es'" (click)="switchLang('es')">Español</button>
+    </div>
+  </div>
+</nav>

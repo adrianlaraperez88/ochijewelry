@@ -1,0 +1,273 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "collections": "Colecciones",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "tagline": "Donde la Elegancia se Une a la Artesanía",
+    "subtitle": "Joyería exquisita para los momentos más preciados de tu vida",
+    "cta_shop": "Explorar Colecciones",
+    "cta_services": "Nuestros Servicios",
+    "stats": {
+      "years_num": "15+",
+      "years_lbl": "Años de Experiencia",
+      "clients_num": "5K+",
+      "clients_lbl": "Clientes Satisfechos",
+      "satisfaction_num": "100%",
+      "satisfaction_lbl": "Satisfacción"
+    }
+  },
+  "collections": {
+    "title": "Nuestras Colecciones",
+    "subtitle": "Joyería fina elaborada con pasión y precisión",
+    "coming_soon": "Próximamente",
+    "coming_soon_desc": "Estamos preparando algo especial. ¡Vuelve pronto para ver nuestras colecciones!",
+    "items": {
+      "chains": {
+        "name": "Cadenas",
+        "desc": "Elegantes cadenas de oro y plata para cada estilo"
+      },
+      "pendants": {
+        "name": "Dijes y Colgantes",
+        "desc": "Dijes significativos y diseños de colgantes impresionantes"
+      },
+      "rings": {
+        "name": "Anillos",
+        "desc": "Desde argollas clásicas hasta llamativos anillos de declaración"
+      },
+      "engagement": {
+        "name": "Compromiso",
+        "desc": "Di para siempre con nuestras colecciones nupciales"
+      },
+      "bracelets": {
+        "name": "Pulseras y Guillos",
+        "desc": "Guillos de oro, brazaletes y pulseras de lujo"
+      },
+      "earrings": {
+        "name": "Aretes",
+        "desc": "Argollas, aretes y colgantes en oro y plata"
+      },
+      "custom": {
+        "name": "Joyas Personalizadas",
+        "desc": "Piezas únicas elaboradas según tu visión"
+      }
+    },
+    "view_btn": "Ver Colección"
+  },
+  "promo": {
+    "label": "✦ Ofertas Especiales ✦",
+    "title": "Promociones Exclusivas",
+    "subtitle": "Aprovecha nuestras ofertas por tiempo limitado en joyería fina seleccionada",
+    "badge_sale": "OFERTA",
+    "badge_limited": "Tiempo Limitado",
+    "badge_new": "NUEVO",
+    "cta": "Ver Oferta",
+    "contact_cta": "Consultar Precio",
+    "items": {
+      "ring": {
+        "name": "Anillos de Compromiso",
+        "desc": "Diseños exclusivos en oro 18k y diamantes certificados",
+        "discount": "Offerta Especial"
+      },
+      "necklace": {
+        "name": "Cadenas y Collares",
+        "desc": "Cadenas en oro amarillo, blanco y rosado",
+        "discount": "Offerta Especial"
+      },
+      "bracelet": {
+        "name": "Pulseras y Guillos",
+        "desc": "Guillos y pulseras para toda ocasión",
+        "discount": "Offerta Especial"
+      }
+    }
+  },
+  "services": {
+    "title": "Servicios Expertos",
+    "hero_label": "✦ Artesanía Profesional ✦",
+    "subtitle": "Reparación y restauración profesional por maestros joyeros",
+    "process_title": "¿Cómo Funciona?",
+    "why_title": "¿Por Qué Elegirnos?",
+    "cta_title": "¿Lista tu joya para una transformación?",
+    "cta_sub": "Visítanos en tienda o escríbenos. La mayoría de reparaciones se completan el mismo día.",
+    "call_now": "📞 Llamar Ahora",
+    "whatsapp": "💬 WhatsApp",
+    "badge": "Servicio Profesional",
+    "items": {
+      "repair": {
+        "name": "Reparaciones al Momento",
+        "desc": "Entrega rápida en la mayoría de reparaciones, listas mientras esperas.",
+        "detail": "Tiempo estimado: 30–60 min"
+      },
+      "resize": {
+        "name": "Agrandar y Achicar Anillos",
+        "desc": "Talla perfecta garantizada — ajustamos tus anillos con precisión.",
+        "detail": "Tiempo estimado: 1–2 horas"
+      },
+      "solder": {
+        "name": "Soldadura",
+        "desc": "Soldadura experta para restaurar broches, eslabones y bandas rotas.",
+        "detail": "Tiempo estimado: 30 min"
+      },
+      "restore": {
+        "name": "Restauración de Joyas",
+        "desc": "Dale nueva vida a piezas de herencia con nuestro servicio de restauración completa.",
+        "detail": "Tiempo estimado: 1–3 días"
+      },
+      "plating": {
+        "name": "Baños de Oro",
+        "desc": "Renueva y protege tus joyas con baños de oro de alta calidad.",
+        "detail": "Tiempo estimado: 24 horas"
+      },
+      "stone": {
+        "name": "Engaste de Piedras",
+        "desc": "Asegura piedras sueltas o mejora con nuevas gemas — garras, bisel y pavé.",
+        "detail": "Tiempo estimado: 1–2 horas"
+      },
+      "maintenance": {
+        "name": "Limpieza y Mantenimiento",
+        "desc": "Limpieza profesional ultrasónica, pulido y ajuste de todo tipo de joyería.",
+        "detail": "Tiempo estimado: 30 min"
+      },
+      "general": {
+        "name": "Reparación General",
+        "desc": "Desde broches hasta cadenas — solucionamos todo tipo de problemas de joyería.",
+        "detail": "Tiempo estimado: varía"
+      }
+    },
+    "process": {
+      "step1": {
+        "num": "01",
+        "title": "Tráenos tu Pieza",
+        "desc": "Visítanos en tienda con tu joya. Hacemos una evaluación gratuita al instante."
+      },
+      "step2": {
+        "num": "02",
+        "title": "Diagnóstico Gratuito",
+        "desc": "Nuestros expertos analizan la pieza y te ofrecen un presupuesto transparente."
+      },
+      "step3": {
+        "num": "03",
+        "title": "Trabajo Experto",
+        "desc": "Maestros joyeros trabajan tu pieza con herramientas de precisión y calidad."
+      },
+      "step4": {
+        "num": "04",
+        "title": "Entrega y Garantía",
+        "desc": "Recibes tu joya restaurada con garantía de satisfacción total."
+      }
+    },
+    "why": {
+      "experience": {
+        "title": "15+ Años de Experiencia",
+        "desc": "Décadas perfeccionando el arte de la joyería fina."
+      },
+      "fast": {
+        "title": "Servicio el Mismo Día",
+        "desc": "La mayoría de reparaciones listas mientras esperas."
+      },
+      "price": {
+        "title": "Precios Justos y Claros",
+        "desc": "Presupuesto gratis. Sin sorpresas. Precio justo siempre."
+      },
+      "quality": {
+        "title": "Garantía de Calidad",
+        "desc": "Cada trabajo tiene garantía. Tu satisfacción es nuestra prioridad."
+      }
+    }
+  },
+  "about": {
+    "title": "Sobre Ochi Jewelry",
+    "subtitle": "Nuestra Historia",
+    "p1": "Ochi Jewelry fue fundada con una misión simple: acercar la artesanía excepcional y la belleza atemporal a todos. Somos una joyería boutique especializada en piezas finas de oro y plata, así como en servicios profesionales de reparación y restauración.",
+    "p2": "Cada pieza de nuestra colección es cuidadosamente seleccionada por su calidad. Nuestros maestros joyeros aportan décadas de experiencia en cada reparación, restauración y creación personalizada — tratando cada pieza como si fuera propia.",
+    "stat1": {
+      "value": "15+",
+      "label": "Años de Experiencia"
+    },
+    "stat2": {
+      "value": "5000+",
+      "label": "Clientes Felices"
+    },
+    "stat3": {
+      "value": "100%",
+      "label": "Satisfacción"
+    }
+  },
+  "contact": {
+    "title": "Visítanos",
+    "subtitle": "Nos encantaría saber de ti",
+    "form": {
+      "name": "Tu Nombre",
+      "email": "Correo Electrónico",
+      "message": "Tu Mensaje",
+      "send": "Enviar Mensaje",
+      "success": "¡Mensaje enviado! Te contactaremos pronto."
+    },
+    "info": {
+      "location": "Ubicación",
+      "address": "2800 Hikes Ln, Louisville, KY 40218",
+      "hours_title": "Horario",
+      "hours": "Lun – Sáb: 9:00 AM – 7:00 PM",
+      "hours2": "Domingo: 11:00 AM – 4:00 PM",
+      "phone_title": "Teléfono",
+      "phone": "+1 (502) 539-2085",
+      "email_title": "Correo",
+      "email": "info@ochijewelry.com"
+    }
+  },
+  "footer": {
+    "tagline": "Elegancia atemporal, artesanía excepcional.",
+    "quick_links": "Enlaces Rápidos",
+    "follow": "Síguenos",
+    "copyright": "© 2025 Ochi Jewelry. Todos los derechos reservados."
+  },
+  "highlights": {
+    "title": "¿Por Qué Ochi Jewelry?",
+    "quality": {
+      "title": "Calidad Premium",
+      "desc": "Solo el mejor oro y plata, garantizado."
+    },
+    "fast": {
+      "title": "Servicio Rápido",
+      "desc": "La mayoría de reparaciones se completan el mismo día."
+    },
+    "custom": {
+      "title": "Diseños Personalizados",
+      "desc": "Tu visión hecha realidad por maestros joyeros."
+    },
+    "trust": {
+      "title": "Confianza desde 2010",
+      "desc": "Más de 15 años sirviendo a nuestra comunidad."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Joyería Fina y Reparaciones de Relojes y Joyas",
+      "desc": "Ochi Jewelry ofrece joyería fina de oro y plata, anillos de compromiso personalizados y reparaciones expertas el mismo día en Miami, FL. Visítanos para un presupuesto gratis.",
+      "keywords": "joyería miami, reparación de joyas, cadenas de oro, anillos de compromiso, joyas personalizadas, taller de joyería"
+    },
+    "collections": {
+      "title": "Colecciones de Joyas de Oro y Plata",
+      "desc": "Explora el catálogo de Ochi Jewelry: cadenas de oro elegantes, dijes, anillos de compromiso, colgantes y pulseras de lujo elaboradas con pasión.",
+      "keywords": "cadenas de oro, pulseras de plata, anillos de boda, colgantes de oro, dijes personalizados"
+    },
+    "services": {
+      "title": "Reparación y Restauración Profesional de Joyas",
+      "desc": "Ajuste de talla de anillos, soldadura, baños de oro y restauración de piezas de herencia por maestros joyeros en Ochi Jewelry. Diagnóstico gratis.",
+      "keywords": "reparación de joyas miami, achicar anillo, baño de oro, restaurar joyas antiguas, soldar cadena"
+    },
+    "about": {
+      "title": "Sobre Nosotros — Más de 15 Años de Experiencia",
+      "desc": "Nuestra historia y valores. En Ochi Jewelry acercamos la artesanía excepcional y la joyería fina atemporal a nuestra comunidad desde 2010.",
+      "keywords": "sobre ochi jewelry, maestros joyeros miami, boutique de joyería, historia de joyería local"
+    },
+    "contact": {
+      "title": "Boutique en Miami y Datos de Contacto",
+      "desc": "Visita Ochi Jewelry en Jewelers Row, Miami, FL. Horarios de atención, teléfono y mapa. Agenda una consulta de diseño o reparación.",
+      "keywords": "joyería en miami, dirección ochi jewelry, teléfono joyería, cómo llegar a la joyería"
+    }
+  }
+}

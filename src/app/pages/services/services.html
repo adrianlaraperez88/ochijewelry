@@ -1,0 +1,118 @@
+<!-- ─── Hero ─────────────────────────────────────────────────────────────── -->
+<section class="services-hero">
+  <div class="hero-bg">
+    <img ngSrc="/assets/images/services-hero.png" alt="Servicios de joyería" fill priority style="object-fit: cover;" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container hero-content">
+    <span class="section-label">{{ 'services.hero_label' | translate }}</span>
+    <h1>{{ 'services.title' | translate }}</h1>
+    <div class="gold-divider"></div>
+    <p>{{ 'services.subtitle' | translate }}</p>
+    <div class="hero-actions">
+      <a href="tel:+13055550190" class="btn-primary">{{ 'services.call_now' | translate }}</a>
+      <a href="https://wa.me/13055550190" target="_blank" class="btn-outline">{{ 'services.whatsapp' | translate }}</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div></div>
+</section>
+
+<!-- ─── Services Grid ─────────────────────────────────────────────────────── -->
+<section class="services-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">✦ {{ 'services.badge' | translate }} ✦</span>
+      <h2>{{ 'services.title' | translate }}</h2>
+      <div class="gold-divider"></div>
+      <p>{{ 'services.subtitle' | translate }}</p>
+    </div>
+
+    <div class="services-grid">
+      @for (svc of services; track svc.key; let i = $index) {
+        <div class="service-card" [class.highlighted]="svc.highlight" [style.animation-delay]="(i * 0.07) + 's'">
+          @if (svc.highlight) {
+            <div class="highlight-badge">{{ 'services.badge' | translate }}</div>
+          }
+          <div class="card-top">
+            <div class="service-icon-ring">
+              <span class="service-icon">{{ svc.icon }}</span>
+            </div>
+            <div class="service-info">
+              <h3>{{ 'services.items.' + svc.key + '.name' | translate }}</h3>
+              <span class="service-time">⏱ {{ 'services.items.' + svc.key + '.detail' | translate }}</span>
+            </div>
+          </div>
+          <p>{{ 'services.items.' + svc.key + '.desc' | translate }}</p>
+          <a href="https://wa.me/13055550190" target="_blank" class="service-cta">
+            {{ 'services.whatsapp' | translate }}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ─── How It Works ──────────────────────────────────────────────────────── -->
+<section class="process-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">✦ Proceso ✦</span>
+      <h2>{{ 'services.process_title' | translate }}</h2>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="process-grid">
+      @for (step of processSteps; track step; let i = $index) {
+        <div class="process-step" [style.animation-delay]="(i * 0.15) + 's'">
+          <div class="step-number">{{ 'services.process.' + step + '.num' | translate }}</div>
+          <div class="step-connector" [class.last]="i === processSteps.length - 1"></div>
+          <h3>{{ 'services.process.' + step + '.title' | translate }}</h3>
+          <p>{{ 'services.process.' + step + '.desc' | translate }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ─── Why Us ────────────────────────────────────────────────────────────── -->
+<section class="why-section section">
+  <div class="why-bg">
+    <img ngSrc="/assets/images/repair.png" alt="Workshop" fill style="object-fit: cover;" />
+    <div class="why-overlay"></div>
+  </div>
+  <div class="container why-inner">
+    <div class="why-text">
+      <span class="section-label">✦ Nuestra Diferencia ✦</span>
+      <h2>{{ 'services.why_title' | translate }}</h2>
+      <div class="gold-divider" style="margin: 1rem 0;"></div>
+      <div class="why-grid">
+        @for (item of whyItems; track item; let i = $index) {
+          <div class="why-card" [style.animation-delay]="(i * 0.1) + 's'">
+            <span class="why-icon">{{ whyIcons[item] }}</span>
+            <div>
+              <h4>{{ 'services.why.' + item + '.title' | translate }}</h4>
+              <p>{{ 'services.why.' + item + '.desc' | translate }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ───────────────────────────────────────────────────────────────── -->
+<section class="services-cta section">
+  <div class="cta-glow"></div>
+  <div class="container services-cta-inner">
+    <span class="section-label">✦ Contáctanos ✦</span>
+    <h2>{{ 'services.cta_title' | translate }}</h2>
+    <div class="gold-divider"></div>
+    <p>{{ 'services.cta_sub' | translate }}</p>
+    <div class="cta-actions">
+      <a href="tel:+13055550190" class="btn-primary">{{ 'services.call_now' | translate }}</a>
+      <a href="https://wa.me/13055550190" target="_blank" class="btn-outline">{{ 'services.whatsapp' | translate }}</a>
+      <a routerLink="/contact" class="btn-outline">{{ 'nav.contact' | translate }}</a>
+    </div>
+  </div>
+</section>

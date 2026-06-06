@@ -1,0 +1,53 @@
+<!-- Page Header -->
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img ngSrc="/assets/images/chains.png" alt="Collections" fill priority style="object-fit: cover;" />
+    <div class="page-hero-overlay"></div>
+  </div>
+  <div class="container page-hero-content">
+    <span class="section-label">✦ Ochi Jewelry ✦</span>
+    <h1>{{ 'collections.title' | translate }}</h1>
+    <div class="gold-divider"></div>
+    <p>{{ 'collections.subtitle' | translate }}</p>
+  </div>
+</section>
+
+<!-- Collections Grid -->
+<section class="collections-section section">
+  <div class="container">
+    <div class="collections-grid">
+      @for (cat of categories; track cat.key; let i = $index) {
+        <div class="collection-card glass-card" [class.featured]="i === 2" [style.animation-delay]="(i * 0.1) + 's'">
+          <div class="card-image">
+            <img [ngSrc]="'/assets/images/' + cat.img" [alt]="cat.key" width="1024" height="1024" />
+            <div class="card-overlay"></div>
+            <div class="card-icon">{{ cat.icon }}</div>
+          </div>
+          <div class="card-body">
+            <h3>{{ 'collections.items.' + cat.key + '.name' | translate }}</h3>
+            <p>{{ 'collections.items.' + cat.key + '.desc' | translate }}</p>
+            <button class="card-btn">
+              {{ 'collections.view_btn' | translate }}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Custom Order Banner -->
+<section class="custom-banner section">
+  <div class="container custom-banner-inner">
+    <div class="custom-text">
+      <span class="section-label">✦ Bespoke Service ✦</span>
+      <h2>{{ 'collections.items.custom.name' | translate }}</h2>
+      <div class="gold-divider"></div>
+      <p>{{ 'collections.items.custom.desc' | translate }}</p>
+    </div>
+    <div class="custom-image">
+      <img ngSrc="/assets/images/custom.png" alt="Custom Jewelry" width="1024" height="1024" />
+    </div>
+  </div>
+</section>

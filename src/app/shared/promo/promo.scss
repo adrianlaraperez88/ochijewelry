@@ -1,0 +1,188 @@
+.promo-section {
+  background: var(--color-black);
+  position: relative;
+  overflow: hidden;
+
+  .promo-bg-glow {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(201,168,76,0.06) 0%, transparent 65%);
+    pointer-events: none;
+  }
+}
+
+// Full-width banner
+.promo-banner {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-bottom: var(--spacing-xl);
+  border: 1px solid var(--color-border);
+
+  img {
+    width: 100%;
+    height: clamp(220px, 40vw, 420px);
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s ease;
+  }
+
+  &:hover img { transform: scale(1.03); }
+
+  .banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(10,10,10,0.9) 0%,
+      rgba(10,10,10,0.6) 50%,
+      transparent 100%
+    );
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xl) var(--spacing-2xl);
+
+    @media (max-width: 600px) {
+      padding: var(--spacing-lg);
+      background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.6) 60%, transparent 100%);
+      align-items: flex-end;
+    }
+  }
+
+  .banner-content {
+    max-width: 480px;
+
+    .banner-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-black);
+      background: var(--color-gold);
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    h3 {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      color: var(--color-text);
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      margin-bottom: var(--spacing-md);
+      max-width: 360px;
+    }
+  }
+}
+
+// Promo cards
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+
+  @media (max-width: 900px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 500px) { grid-template-columns: 1fr; }
+}
+
+.promo-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition-med);
+  animation: fadeInUp 0.7s ease both;
+
+  &:hover {
+    border-color: var(--color-border-hover);
+    box-shadow: var(--shadow-gold);
+    transform: translateY(-4px);
+
+    .promo-img-wrap img { transform: scale(1.06); }
+  }
+}
+
+.promo-img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+
+  @media (max-width: 500px) { height: 200px; }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  .promo-badge {
+    position: absolute;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-black);
+    background: var(--color-gold);
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-pill);
+  }
+
+  .promo-discount {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    right: var(--spacing-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+    background: rgba(10,10,10,0.85);
+    border: 1px solid var(--color-gold);
+    padding: 0.3rem 0.7rem;
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(8px);
+  }
+}
+
+.promo-body {
+  padding: var(--spacing-md);
+
+  h3 {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 0.4rem;
+    font-family: var(--font-display);
+  }
+
+  p {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+.promo-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  transition: var(--transition-fast);
+
+  svg { transition: transform var(--transition-fast); }
+  &:hover svg { transform: translateX(4px); }
+}

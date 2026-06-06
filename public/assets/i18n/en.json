@@ -1,0 +1,273 @@
+{
+  "nav": {
+    "home": "Home",
+    "collections": "Collections",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Where Elegance Meets Craftsmanship",
+    "subtitle": "Exquisite jewelry for life's most precious moments",
+    "cta_shop": "Explore Collections",
+    "cta_services": "Our Services",
+    "stats": {
+      "years_num": "15+",
+      "years_lbl": "Years Experience",
+      "clients_num": "5K+",
+      "clients_lbl": "Happy Clients",
+      "satisfaction_num": "100%",
+      "satisfaction_lbl": "Satisfaction"
+    }
+  },
+  "collections": {
+    "title": "Our Collections",
+    "subtitle": "Fine jewelry crafted with passion and precision",
+    "coming_soon": "Coming Soon",
+    "coming_soon_desc": "We're preparing something special. Check back soon to see our full collections!",
+    "items": {
+      "chains": {
+        "name": "Chains",
+        "desc": "Elegant gold & silver chains for every style"
+      },
+      "pendants": {
+        "name": "Pendants & Charms",
+        "desc": "Meaningful charms and stunning pendant designs"
+      },
+      "rings": {
+        "name": "Rings",
+        "desc": "From classic bands to dazzling statement rings"
+      },
+      "engagement": {
+        "name": "Engagement",
+        "desc": "Say forever with our bridal collections"
+      },
+      "bracelets": {
+        "name": "Bracelets",
+        "desc": "Gold guillos, bangles and luxury bracelets"
+      },
+      "earrings": {
+        "name": "Earrings",
+        "desc": "Hoops, studs and drop earrings in gold & silver"
+      },
+      "custom": {
+        "name": "Custom Jewelry",
+        "desc": "Bespoke pieces crafted to your vision"
+      }
+    },
+    "view_btn": "View Collection"
+  },
+  "promo": {
+    "label": "✦ Special Offers ✦",
+    "title": "Exclusive Promotions",
+    "subtitle": "Take advantage of our limited-time offers on selected fine jewelry",
+    "badge_sale": "SALE",
+    "badge_limited": "Limited Time",
+    "badge_new": "NEW",
+    "cta": "View Deal",
+    "contact_cta": "Ask for Price",
+    "items": {
+      "ring": {
+        "name": "Engagement Rings",
+        "desc": "Exclusive 18k gold and certified diamond designs",
+        "discount": "Exclusive Offer"
+      },
+      "necklace": {
+        "name": "Chains & Necklaces",
+        "desc": "Chains in yellow, white and rose gold",
+        "discount": "Exclusive Offer"
+      },
+      "bracelet": {
+        "name": "Bracelets & Guillos",
+        "desc": "Guillos and bracelets for every occasion",
+        "discount": "Exclusive Offer"
+      }
+    }
+  },
+  "services": {
+    "title": "Expert Services",
+    "hero_label": "✦ Professional Craftsmanship ✦",
+    "subtitle": "Professional repair and restoration by master jewelers",
+    "process_title": "How It Works",
+    "why_title": "Why Choose Us?",
+    "cta_title": "Ready to restore your jewelry?",
+    "cta_sub": "Visit us in store or send us a message. Most repairs are completed the same day.",
+    "call_now": "📞 Call Now",
+    "whatsapp": "💬 WhatsApp",
+    "badge": "Professional Service",
+    "items": {
+      "repair": {
+        "name": "Same-Day Repairs",
+        "desc": "Quick turnaround on most jewelry repairs, done while you wait.",
+        "detail": "Est. time: 30–60 min"
+      },
+      "resize": {
+        "name": "Ring Resizing",
+        "desc": "Perfect fit guaranteed — we size rings up or down with precision.",
+        "detail": "Est. time: 1–2 hours"
+      },
+      "solder": {
+        "name": "Soldering",
+        "desc": "Expert soldering to restore broken clasps, links and bands.",
+        "detail": "Est. time: 30 min"
+      },
+      "restore": {
+        "name": "Jewelry Restoration",
+        "desc": "Breathe new life into heirloom pieces with our complete restoration service.",
+        "detail": "Est. time: 1–3 days"
+      },
+      "plating": {
+        "name": "Gold Plating",
+        "desc": "Refresh and protect your jewelry with premium gold bath plating.",
+        "detail": "Est. time: 24 hours"
+      },
+      "stone": {
+        "name": "Stone Setting",
+        "desc": "Secure loose stones or upgrade with new gems — prong, bezel, and pavé.",
+        "detail": "Est. time: 1–2 hours"
+      },
+      "maintenance": {
+        "name": "Cleaning & Maintenance",
+        "desc": "Professional ultrasonic cleaning, polishing and adjustment of all jewelry types.",
+        "detail": "Est. time: 30 min"
+      },
+      "general": {
+        "name": "General Repairs",
+        "desc": "From clasps to chains — we fix all types of jewelry problems.",
+        "detail": "Est. time: varies"
+      }
+    },
+    "process": {
+      "step1": {
+        "num": "01",
+        "title": "Bring Your Piece",
+        "desc": "Visit us in store with your jewelry. We do a free instant evaluation."
+      },
+      "step2": {
+        "num": "02",
+        "title": "Free Diagnosis",
+        "desc": "Our experts analyze the piece and give you a transparent quote."
+      },
+      "step3": {
+        "num": "03",
+        "title": "Expert Work",
+        "desc": "Master jewelers work on your piece with precision tools and quality."
+      },
+      "step4": {
+        "num": "04",
+        "title": "Delivery & Guarantee",
+        "desc": "Receive your restored jewelry with a full satisfaction guarantee."
+      }
+    },
+    "why": {
+      "experience": {
+        "title": "15+ Years Experience",
+        "desc": "Decades perfecting the art of fine jewelry."
+      },
+      "fast": {
+        "title": "Same-Day Service",
+        "desc": "Most repairs ready while you wait."
+      },
+      "price": {
+        "title": "Fair & Clear Pricing",
+        "desc": "Free quote. No surprises. Always fair price."
+      },
+      "quality": {
+        "title": "Quality Guarantee",
+        "desc": "Every job comes with a guarantee. Your satisfaction is our priority."
+      }
+    }
+  },
+  "about": {
+    "title": "About Ochi Jewelry",
+    "subtitle": "Our Story",
+    "p1": "Ochi Jewelry was founded with a simple mission: to bring exceptional craftsmanship and timeless beauty within reach. We are a boutique jewelry house specializing in fine gold and silver pieces, as well as professional repair and restoration services.",
+    "p2": "Every piece in our collection is carefully selected for quality. Our master jewelers bring decades of experience to every repair, restoration, and custom creation — treating each piece as if it were their own.",
+    "stat1": {
+      "value": "15+",
+      "label": "Years Experience"
+    },
+    "stat2": {
+      "value": "5000+",
+      "label": "Happy Clients"
+    },
+    "stat3": {
+      "value": "100%",
+      "label": "Satisfaction"
+    }
+  },
+  "contact": {
+    "title": "Visit Us",
+    "subtitle": "We'd love to hear from you",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "message": "Your Message",
+      "send": "Send Message",
+      "success": "Message sent! We'll be in touch soon."
+    },
+    "info": {
+      "location": "Location",
+      "address": "2800 Hikes Ln, Louisville, KY 40218",
+      "hours_title": "Store Hours",
+      "hours": "Mon – Sat: 9:00 AM – 7:00 PM",
+      "hours2": "Sunday: 11:00 AM – 4:00 PM",
+      "phone_title": "Phone",
+      "phone": "+1 (502) 539-2085",
+      "email_title": "Email",
+      "email": "info@ochijewelry.com"
+    }
+  },
+  "footer": {
+    "tagline": "Timeless elegance, exceptional craftsmanship.",
+    "quick_links": "Quick Links",
+    "follow": "Follow Us",
+    "copyright": "© 2025 Ochi Jewelry. All rights reserved."
+  },
+  "highlights": {
+    "title": "Why Ochi Jewelry?",
+    "quality": {
+      "title": "Premium Quality",
+      "desc": "Only the finest gold and silver, guaranteed."
+    },
+    "fast": {
+      "title": "Fast Service",
+      "desc": "Most repairs completed same day."
+    },
+    "custom": {
+      "title": "Custom Designs",
+      "desc": "Your vision brought to life by master jewelers."
+    },
+    "trust": {
+      "title": "Trusted Since 2010",
+      "desc": "15+ years serving our community."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Fine Jewelry & Expert Repair Services",
+      "desc": "Ochi Jewelry offers fine gold & silver jewelry, custom engagement rings, and same-day expert repairs in Miami, FL. Visit us for a free quote.",
+      "keywords": "jewelry store, miami jewelry repair, gold chains, engagement rings, custom jewelry, same day jewelry repair"
+    },
+    "collections": {
+      "title": "Fine Gold & Silver Jewelry Collections",
+      "desc": "Explore Ochi Jewelry's catalog of elegant gold chains, pendants, engagement rings, bangles, and bracelets crafted with passion and precision.",
+      "keywords": "gold chains, silver bracelets, engagement rings, bespoke pendants, luxury bracelets"
+    },
+    "services": {
+      "title": "Professional Jewelry Repair & Restoration",
+      "desc": "Same-day jewelry repairs, ring resizing, soldering, plating, and complete restoration by master jewelers at Ochi Jewelry. Free diagnosis in-store.",
+      "keywords": "same day jewelry repair, ring resizing miami, gold plating, jewelry restoration, clasp soldering"
+    },
+    "about": {
+      "title": "About Us — Decades of Exceptional Craftsmanship",
+      "desc": "Our story and values. Ochi Jewelry brings exceptional craftsmanship and timeless gold and silver pieces to our community since 2010.",
+      "keywords": "about ochi jewelry, master jewelers, jewelry boutique story, local jewellers"
+    },
+    "contact": {
+      "title": "Boutique Location & Contact Details",
+      "desc": "Visit Ochi Jewelry at Jewelers Row in Miami, FL. Store hours, phone number, and directions. Schedule a design consultation or repair.",
+      "keywords": "ochijewelry location, jewelry boutique miami, contact jeweller, directions to jewelry store"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+<!-- Hero -->
+<section class="about-hero">
+  <div class="about-hero-bg">
+    <img ngSrc="/assets/images/store.png" alt="Ochi Jewelry Store" fill priority style="object-fit: cover;" />
+    <div class="about-overlay"></div>
+  </div>
+  <div class="container about-hero-content">
+    <span class="section-label">✦ Our Story ✦</span>
+    <h1>{{ 'about.title' | translate }}</h1>
+    <div class="gold-divider"></div>
+  </div>
+</section>
+
+<!-- Story Section -->
+<section class="story section">
+  <div class="container story-inner">
+    <div class="story-text">
+      <span class="section-label">✦ {{ 'about.subtitle' | translate }} ✦</span>
+      <h2>{{ 'about.title' | translate }}</h2>
+      <div class="gold-divider" style="margin: 1rem 0;"></div>
+      <p>{{ 'about.p1' | translate }}</p>
+      <p style="margin-top: 1rem;">{{ 'about.p2' | translate }}</p>
+
+      <div class="about-stats">
+        @for (stat of stats; track stat.key) {
+          <div class="about-stat">
+            <strong>{{ 'about.' + stat.key + '.value' | translate }}</strong>
+            <span>{{ 'about.' + stat.key + '.label' | translate }}</span>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="story-image">
+      <div class="image-frame">
+        <img ngSrc="/assets/images/store.png" alt="Our Store" width="1024" height="1024" />
+        <div class="image-decoration"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section class="values section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">✦ Our Values ✦</span>
+      <h2>What We Stand For</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="values-grid">
+      @for (val of values; track val.title; let i = $index) {
+        <div class="value-card glass-card" [style.animation-delay]="(i * 0.12) + 's'">
+          <div class="value-icon">{{ val.icon }}</div>
+          <h3>{{ val.title }}</h3>
+          <p>{{ val.desc }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,120 @@
+<!-- Hero -->
+<section class="contact-hero">
+  <div class="contact-hero-content container">
+    <span class="section-label">✦ Get In Touch ✦</span>
+    <h1>{{ 'contact.title' | translate }}</h1>
+    <div class="gold-divider"></div>
+    <p>{{ 'contact.subtitle' | translate }}</p>
+  </div>
+  <div class="hero-gold-glow"></div>
+</section>
+
+<!-- Contact Layout -->
+<section class="contact-section section">
+  <div class="container contact-grid">
+
+    <!-- Form -->
+    <div class="contact-form-wrap glass-card">
+      <h2>{{ 'contact.subtitle' | translate }}</h2>
+
+      @if (submitted()) {
+        <div class="success-message">
+          <span class="success-icon">✅</span>
+          <p>{{ 'contact.form.success' | translate }}</p>
+        </div>
+      }
+
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="form-group">
+          <label>{{ 'contact.form.name' | translate }}</label>
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="form.name"
+            [placeholder]="'contact.form.name' | translate"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label>{{ 'contact.form.email' | translate }}</label>
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="form.email"
+            [placeholder]="'contact.form.email' | translate"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label>{{ 'contact.form.message' | translate }}</label>
+          <textarea
+            name="message"
+            [(ngModel)]="form.message"
+            [placeholder]="'contact.form.message' | translate"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary submit-btn" [disabled]="sending()">
+          @if (sending()) {
+            <span class="spinner"></span>
+            <span>Sending...</span>
+          } @else {
+            <span>{{ 'contact.form.send' | translate }}</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          }
+        </button>
+      </form>
+    </div>
+
+    <!-- Info -->
+    <div class="contact-info">
+      <div class="info-card glass-card">
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div>
+            <h4>{{ 'contact.info.location' | translate }}</h4>
+            <p>{{ 'contact.info.address' | translate }}</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div>
+            <h4>{{ 'contact.info.phone_title' | translate }}</h4>
+            <p><a href="tel:+13055550190">{{ 'contact.info.phone' | translate }}</a></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div>
+            <h4>{{ 'contact.info.email_title' | translate }}</h4>
+            <p><a href="mailto:info@ochijewelry.com">{{ 'contact.info.email' | translate }}</a></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🕐</div>
+          <div>
+            <h4>{{ 'contact.info.hours_title' | translate }}</h4>
+            <p>{{ 'contact.info.hours' | translate }}</p>
+            <p>{{ 'contact.info.hours2' | translate }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map placeholder -->
+      <div class="map-placeholder glass-card">
+        <div class="map-inner">
+          <span class="map-icon">🗺️</span>
+          <p>{{ 'contact.info.address' | translate }}</p>
+          <a [href]="'https://www.google.com/maps/search/?api=1&query=' + ('contact.info.address' | translate)" target="_blank" class="btn-outline" style="margin-top: 1rem; display: inline-flex;">
+            Get Directions →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

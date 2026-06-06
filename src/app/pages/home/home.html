@@ -1,0 +1,151 @@
+<!-- ─── HERO ───────────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg">
+    <img ngSrc="/assets/images/hero.png" alt="Ochi Jewelry" fill priority style="object-fit: cover;" />
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-badge">
+      <span>✦</span><span>Joyería Fina desde 2010</span><span>✦</span>
+    </div>
+    <h1 class="hero-title">{{ 'hero.tagline' | translate }}</h1>
+    <p class="hero-subtitle">{{ 'hero.subtitle' | translate }}</p>
+    <div class="hero-actions">
+      <a routerLink="/services" class="btn-primary">
+        <span>{{ 'hero.cta_services' | translate }}</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+      <a routerLink="/collections" class="btn-outline">{{ 'hero.cta_shop' | translate }}</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <strong>{{ 'hero.stats.years_num' | translate }}</strong>
+        <span>{{ 'hero.stats.years_lbl' | translate }}</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <strong>{{ 'hero.stats.clients_num' | translate }}</strong>
+        <span>{{ 'hero.stats.clients_lbl' | translate }}</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <strong>{{ 'hero.stats.satisfaction_num' | translate }}</strong>
+        <span>{{ 'hero.stats.satisfaction_lbl' | translate }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ─── HIGHLIGHTS ────────────────────────────────────────────────────────── -->
+@if (ff.isEnabled('showHighlights')) {
+<section class="highlights section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">✦ Nuestra Promesa ✦</span>
+      <h2>{{ 'highlights.title' | translate }}</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="highlights-grid">
+      @for (h of highlights; track h.key) {
+      <div class="highlight-card glass-card">
+        <div class="highlight-icon">{{ h.icon }}</div>
+        <h3>{{ 'highlights.' + h.key + '.title' | translate }}</h3>
+        <p>{{ 'highlights.' + h.key + '.desc' | translate }}</p>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+}
+
+<!-- ─── PROMOTIONS ────────────────────────────────────────────────────────── -->
+@if (ff.isEnabled('showPromo')) {
+<app-promo></app-promo>
+}
+
+<!-- ─── FEATURED COLLECTIONS (feature flagged) ───────────────────────────── -->
+@if (ff.isEnabled('showFeaturedGrid')) {
+<section class="featured section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">✦ Colecciones ✦</span>
+      <h2>{{ 'collections.title' | translate }}</h2>
+      <div class="gold-divider"></div>
+      <p>{{ 'collections.subtitle' | translate }}</p>
+    </div>
+
+    <div class="featured-grid">
+      <div class="featured-main">
+        <a routerLink="/collections" class="featured-card large">
+          <img ngSrc="/assets/images/rings.png" alt="Anillos" fill style="object-fit: cover;" />
+          <div class="featured-overlay">
+            <span class="featured-label">{{ 'collections.items.engagement.name' | translate }}</span>
+            <span class="featured-cta">{{ 'collections.view_btn' | translate }} →</span>
+          </div>
+        </a>
+      </div>
+      <div class="featured-side">
+        <a routerLink="/collections" class="featured-card">
+          <img ngSrc="/assets/images/chains.png" alt="Cadenas" fill style="object-fit: cover;" />
+          <div class="featured-overlay">
+            <span class="featured-label">{{ 'collections.items.chains.name' | translate }}</span>
+            <span class="featured-cta">{{ 'collections.view_btn' | translate }} →</span>
+          </div>
+        </a>
+        <a routerLink="/collections" class="featured-card">
+          <img ngSrc="/assets/images/bracelets.png" alt="Pulseras" fill style="object-fit: cover;" />
+          <div class="featured-overlay">
+            <span class="featured-label">{{ 'collections.items.bracelets.name' | translate }}</span>
+            <span class="featured-cta">{{ 'collections.view_btn' | translate }} →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="featured-cta-wrap">
+      <a routerLink="/collections" class="btn-outline">{{ 'collections.view_btn' | translate }}</a>
+    </div>
+  </div>
+</section>
+}
+
+<!-- ─── SERVICES TEASER ───────────────────────────────────────────────────── -->
+@if (ff.isEnabled('showServicesTeaserOnHome')) {
+<section class="services-teaser section">
+  <div class="services-teaser-bg">
+    <img ngSrc="/assets/images/services-hero.png" alt="Servicios" fill style="object-fit: cover;" />
+    <div class="teaser-overlay"></div>
+  </div>
+  <div class="container teaser-content">
+    <span class="section-label">✦ Artesanía Experta ✦</span>
+    <h2>{{ 'services.title' | translate }}</h2>
+    <div class="gold-divider"></div>
+    <p>{{ 'services.subtitle' | translate }}</p>
+    <div class="teaser-services">
+      <span>{{ 'services.items.repair.name' | translate }}</span>
+      <span>{{ 'services.items.resize.name' | translate }}</span>
+      <span>{{ 'services.items.plating.name' | translate }}</span>
+      <span>{{ 'services.items.restore.name' | translate }}</span>
+    </div>
+    <a routerLink="/services" class="btn-primary">{{ 'nav.services' | translate }}</a>
+  </div>
+</section>
+}
