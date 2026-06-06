@@ -47,7 +47,7 @@
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
 
-      .story-image { order: -1; }
+      .story-image { display: none; }
     }
   }
 

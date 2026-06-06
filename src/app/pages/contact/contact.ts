@@ -1,7 +1,7 @@
 import { Component, signal, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SEOService } from '../../core/services/seo.service';
 
 @Component({
@@ -13,6 +13,7 @@ import { SEOService } from '../../core/services/seo.service';
 })
 export class ContactComponent implements OnInit {
   private seo = inject(SEOService);
+  private translate = inject(TranslateService);
   form = { name: '', email: '', message: '' };
   submitted = signal(false);
   sending = signal(false);
@@ -25,23 +26,40 @@ export class ContactComponent implements OnInit {
       image: 'https://www.ochijewelry.com/assets/images/logo.webp'
     });
 
-    this.seo.setSchema({
-      '@context': 'https://schema.org',
-      '@type': 'ContactPage',
-      'mainEntity': {
-        '@type': 'LocalBusiness',
-        'name': 'Ochi Jewelry',
-        'telephone': '+15025392085',
-        'email': 'info@ochijewelry.com',
-        'address': {
-          '@type': 'PostalAddress',
-          'streetAddress': '2800 Hikes Ln',
-          'addressLocality': 'Louisville',
-          'addressRegion': 'KY',
-          'postalCode': '40218',
-          'addressCountry': 'US'
+    this.translate.get([
+      'contact.info.address',
+      'contact.info.phone',
+      'contact.info.email'
+    ]).subscribe(res => {
+      const addressVal = res['contact.info.address'] || '';
+      const phoneVal = res['contact.info.phone'] || '';
+      const emailVal = res['contact.info.email'] || '';
+
+      const addrParts = addressVal.split(',');
+      const street = addrParts[0]?.trim() || '';
+      const city = addrParts[1]?.trim() || '';
+      const stateZip = addrParts[2]?.trim().split(' ') || [];
+      const state = stateZip[0] || '';
+      const zip = stateZip[1] || '';
+
+      this.seo.setSchema({
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        'mainEntity': {
+          '@type': 'LocalBusiness',
+          'name': 'Ochi Jewelry',
+          'telephone': phoneVal,
+          'email': emailVal,
+          'address': {
+            '@type': 'PostalAddress',
+            'streetAddress': street,
+            'addressLocality': city,
+            'addressRegion': state,
+            'postalCode': zip,
+            'addressCountry': 'US'
+          }
         }
-      }
+      });
     });
   }
 

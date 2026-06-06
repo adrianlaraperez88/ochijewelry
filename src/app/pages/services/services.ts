@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NgOptimizedImage } from '@angular/common';
 import { SEOService } from '../../core/services/seo.service';
 
@@ -13,6 +13,7 @@ import { SEOService } from '../../core/services/seo.service';
 })
 export class ServicesComponent implements OnInit {
   private seo = inject(SEOService);
+  private translate = inject(TranslateService);
 
   services = [
     { key: 'repair',      icon: '🔧', highlight: true  },
@@ -43,67 +44,85 @@ export class ServicesComponent implements OnInit {
       image: 'https://www.ochijewelry.com/assets/images/services-hero.webp'
     });
 
-    this.seo.setSchema({
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      'serviceType': 'Jewelry Repair & Custom Design Services',
-      'provider': {
-        '@type': 'JewelryStore',
-        'name': 'Ochi Jewelry',
-        'url': 'https://www.ochijewelry.com/',
-        'telephone': '+15025392085',
-        'priceRange': '$$',
-        'address': {
-          '@type': 'PostalAddress',
-          'streetAddress': '2800 Hikes Ln',
-          'addressLocality': 'Louisville',
-          'addressRegion': 'KY',
-          'postalCode': '40218',
-          'addressCountry': 'US'
-        }
-      },
-      'areaServed': {
-        '@type': 'AdministrativeArea',
-        'name': 'Louisville, KY'
-      },
-      'hasOfferCatalog': {
-        '@type': 'OfferCatalog',
-        'name': 'Jewelry Services Catalog',
-        'itemListElement': [
-          {
-            '@type': 'Offer',
-            'itemOffered': {
-              '@type': 'Service',
-              'name': 'Same-Day Jewelry Repair',
-              'description': 'Quick turnaround on most jewelry repairs, done while you wait.'
-            }
-          },
-          {
-            '@type': 'Offer',
-            'itemOffered': {
-              '@type': 'Service',
-              'name': 'Ring Resizing',
-              'description': 'Sizing rings up or down with precision for a perfect fit.'
-            }
-          },
-          {
-            '@type': 'Offer',
-            'itemOffered': {
-              '@type': 'Service',
-              'name': 'Gold Plating Bath',
-              'description': 'Refresh and protect your jewelry with premium gold plating.'
-            }
-          },
-          {
-            '@type': 'Offer',
-            'itemOffered': {
-              '@type': 'Service',
-              'name': 'Jewelry Restoration',
-              'description': 'Breathe new life into heirloom pieces with our complete restoration service.'
-            }
+    this.translate.get([
+      'contact.info.address',
+      'contact.info.phone',
+      'contact.info.email'
+    ]).subscribe(res => {
+      const addressVal = res['contact.info.address'] || '';
+      const phoneVal = res['contact.info.phone'] || '';
+      const emailVal = res['contact.info.email'] || '';
+
+      const addrParts = addressVal.split(',');
+      const street = addrParts[0]?.trim() || '';
+      const city = addrParts[1]?.trim() || '';
+      const stateZip = addrParts[2]?.trim().split(' ') || [];
+      const state = stateZip[0] || '';
+      const zip = stateZip[1] || '';
+
+      this.seo.setSchema({
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        'serviceType': 'Jewelry Repair & Custom Design Services',
+        'provider': {
+          '@type': 'JewelryStore',
+          'name': 'Ochi Jewelry',
+          'url': 'https://www.ochijewelry.com/',
+          'telephone': phoneVal,
+          'email': emailVal,
+          'priceRange': '$$',
+          'address': {
+            '@type': 'PostalAddress',
+            'streetAddress': street,
+            'addressLocality': city,
+            'addressRegion': state,
+            'postalCode': zip,
+            'addressCountry': 'US'
           }
-        ]
-      }
+        },
+        'areaServed': {
+          '@type': 'AdministrativeArea',
+          'name': 'Louisville, KY'
+        },
+        'hasOfferCatalog': {
+          '@type': 'OfferCatalog',
+          'name': 'Jewelry Services Catalog',
+          'itemListElement': [
+            {
+              '@type': 'Offer',
+              'itemOffered': {
+                '@type': 'Service',
+                'name': 'Same-Day Jewelry Repair',
+                'description': 'Quick turnaround on most jewelry repairs, done while you wait.'
+              }
+            },
+            {
+              '@type': 'Offer',
+              'itemOffered': {
+                '@type': 'Service',
+                'name': 'Ring Resizing',
+                'description': 'Sizing rings up or down with precision for a perfect fit.'
+              }
+            },
+            {
+              '@type': 'Offer',
+              'itemOffered': {
+                '@type': 'Service',
+                'name': 'Gold Plating Bath',
+                'description': 'Refresh and protect your jewelry with premium gold plating.'
+              }
+            },
+            {
+              '@type': 'Offer',
+              'itemOffered': {
+                '@type': 'Service',
+                'name': 'Jewelry Restoration',
+                'description': 'Breathe new life into heirloom pieces with our complete restoration service.'
+              }
+            }
+          ]
+        }
+      });
     });
   }
 }

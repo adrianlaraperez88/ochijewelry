@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FeatureFlagService } from '../../core/services/feature-flag.service';
 import { PromoComponent } from '../../shared/promo/promo';
 import { NgOptimizedImage } from '@angular/common';
@@ -16,6 +16,7 @@ import { SEOService } from '../../core/services/seo.service';
 export class HomeComponent implements OnInit {
   ff = inject(FeatureFlagService);
   private seo = inject(SEOService);
+  private translate = inject(TranslateService);
 
   highlights = [
     { icon: '💎', key: 'quality' },
@@ -32,48 +33,66 @@ export class HomeComponent implements OnInit {
       image: 'https://www.ochijewelry.com/assets/images/hero.webp'
     });
 
-    this.seo.setSchema({
-      '@context': 'https://schema.org',
-      '@type': 'JewelryStore',
-      'name': 'Ochi Jewelry',
-      'image': 'https://www.ochijewelry.com/assets/images/hero.webp',
-      'logo': 'https://www.ochijewelry.com/assets/images/logo.webp',
-      '@id': 'https://www.ochijewelry.com/#store',
-      'url': 'https://www.ochijewelry.com/',
-      'telephone': '+15025392085',
-      'priceRange': '$$',
-      'address': {
-        '@type': 'PostalAddress',
-        'streetAddress': '2800 Hikes Ln',
-        'addressLocality': 'Louisville',
-        'addressRegion': 'KY',
-        'postalCode': '40218',
-        'addressCountry': 'US'
-      },
-      'geo': {
-        '@type': 'GeoCoordinates',
-        'latitude': 38.2045,
-        'longitude': -85.6728
-      },
-      'openingHoursSpecification': [
-        {
-          '@type': 'OpeningHoursSpecification',
-          'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-          'opens': '09:00',
-          'closes': '19:00'
+    this.translate.get([
+      'contact.info.address',
+      'contact.info.phone',
+      'contact.info.email'
+    ]).subscribe(res => {
+      const addressVal = res['contact.info.address'] || '';
+      const phoneVal = res['contact.info.phone'] || '';
+      const emailVal = res['contact.info.email'] || '';
+
+      const addrParts = addressVal.split(',');
+      const street = addrParts[0]?.trim() || '';
+      const city = addrParts[1]?.trim() || '';
+      const stateZip = addrParts[2]?.trim().split(' ') || [];
+      const state = stateZip[0] || '';
+      const zip = stateZip[1] || '';
+
+      this.seo.setSchema({
+        '@context': 'https://schema.org',
+        '@type': 'JewelryStore',
+        'name': 'Ochi Jewelry',
+        'image': 'https://www.ochijewelry.com/assets/images/hero.webp',
+        'logo': 'https://www.ochijewelry.com/assets/images/logo.webp',
+        '@id': 'https://www.ochijewelry.com/#store',
+        'url': 'https://www.ochijewelry.com/',
+        'telephone': phoneVal,
+        'email': emailVal,
+        'priceRange': '$$',
+        'address': {
+          '@type': 'PostalAddress',
+          'streetAddress': street,
+          'addressLocality': city,
+          'addressRegion': state,
+          'postalCode': zip,
+          'addressCountry': 'US'
         },
-        {
-          '@type': 'OpeningHoursSpecification',
-          'dayOfWeek': 'Sunday',
-          'opens': '11:00',
-          'closes': '16:00'
-        }
-      ],
-      'sameAs': [
-        'https://www.instagram.com/ochijewelry',
-        'https://www.facebook.com/ochijewelry',
-        'https://wa.me/13055550190'
-      ]
+        'geo': {
+          '@type': 'GeoCoordinates',
+          'latitude': 38.2045,
+          'longitude': -85.6728
+        },
+        'openingHoursSpecification': [
+          {
+            '@type': 'OpeningHoursSpecification',
+            'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            'opens': '09:00',
+            'closes': '19:00'
+          },
+          {
+            '@type': 'OpeningHoursSpecification',
+            'dayOfWeek': 'Sunday',
+            'opens': '11:00',
+            'closes': '16:00'
+          }
+        ],
+        'sameAs': [
+          'https://www.instagram.com/ochijewelry',
+          'https://www.facebook.com/ochijewelry',
+          'https://wa.me/13055550190'
+        ]
+      });
     });
   }
 }

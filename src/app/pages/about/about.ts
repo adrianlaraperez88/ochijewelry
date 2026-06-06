@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NgOptimizedImage } from '@angular/common';
 import { SEOService } from '../../core/services/seo.service';
 
@@ -12,6 +12,7 @@ import { SEOService } from '../../core/services/seo.service';
 })
 export class AboutComponent implements OnInit {
   private seo = inject(SEOService);
+  private translate = inject(TranslateService);
 
   stats = [
     { key: 'stat1' },
@@ -34,23 +35,50 @@ export class AboutComponent implements OnInit {
       image: 'https://www.ochijewelry.com/assets/images/store.webp'
     });
 
-    this.seo.setSchema({
-      '@context': 'https://schema.org',
-      '@type': 'AboutPage',
-      'mainEntity': {
-        '@type': 'LocalBusiness',
-        'name': 'Ochi Jewelry',
-        'image': 'https://www.ochijewelry.com/assets/images/store.webp',
-        'foundingDate': '2010',
-        'knowsAbout': [
-          'Jewelry Repair',
-          'Ring Resizing',
-          'Custom Jewelry Design',
-          'Gold Plating',
-          'Stone Setting',
-          'Laser Soldering'
-        ]
-      }
+    this.translate.get([
+      'contact.info.address',
+      'contact.info.phone',
+      'contact.info.email'
+    ]).subscribe(res => {
+      const addressVal = res['contact.info.address'] || '';
+      const phoneVal = res['contact.info.phone'] || '';
+      const emailVal = res['contact.info.email'] || '';
+
+      const addrParts = addressVal.split(',');
+      const street = addrParts[0]?.trim() || '';
+      const city = addrParts[1]?.trim() || '';
+      const stateZip = addrParts[2]?.trim().split(' ') || [];
+      const state = stateZip[0] || '';
+      const zip = stateZip[1] || '';
+
+      this.seo.setSchema({
+        '@context': 'https://schema.org',
+        '@type': 'AboutPage',
+        'mainEntity': {
+          '@type': 'LocalBusiness',
+          'name': 'Ochi Jewelry',
+          'image': 'https://www.ochijewelry.com/assets/images/store.webp',
+          'foundingDate': '2010',
+          'telephone': phoneVal,
+          'email': emailVal,
+          'address': {
+            '@type': 'PostalAddress',
+            'streetAddress': street,
+            'addressLocality': city,
+            'addressRegion': state,
+            'postalCode': zip,
+            'addressCountry': 'US'
+          },
+          'knowsAbout': [
+            'Jewelry Repair',
+            'Ring Resizing',
+            'Custom Jewelry Design',
+            'Gold Plating',
+            'Stone Setting',
+            'Laser Soldering'
+          ]
+        }
+      });
     });
   }
 }
