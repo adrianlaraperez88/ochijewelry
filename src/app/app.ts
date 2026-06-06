@@ -25,8 +25,21 @@ export class App implements OnInit {
   constructor(private translate: TranslateService) {}
 
   ngOnInit() {
-    const saved = localStorage.getItem('ochi-lang') || 'es';
     this.translate.setDefaultLang('es');
-    this.translate.use(saved);
+    
+    let activeLang = 'es';
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get('lang');
+      
+      if (urlLang && (urlLang === 'en' || urlLang === 'es')) {
+        activeLang = urlLang;
+        localStorage.setItem('ochi-lang', activeLang);
+      } else {
+        activeLang = localStorage.getItem('ochi-lang') || 'es';
+      }
+    }
+    
+    this.translate.use(activeLang);
   }
 }

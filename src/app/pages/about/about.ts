@@ -33,5 +33,24 @@ export class AboutComponent implements OnInit {
       keywordsKey: 'seo.about.keywords',
       image: 'https://www.ochijewelry.com/assets/images/store.webp'
     });
+
+    this.seo.setSchema({
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      'mainEntity': {
+        '@type': 'LocalBusiness',
+        'name': 'Ochi Jewelry',
+        'image': 'https://www.ochijewelry.com/assets/images/store.webp',
+        'foundingDate': '2010',
+        'knowsAbout': [
+          'Jewelry Repair',
+          'Ring Resizing',
+          'Custom Jewelry Design',
+          'Gold Plating',
+          'Stone Setting',
+          'Laser Soldering'
+        ]
+      }
+    });
   }
 }

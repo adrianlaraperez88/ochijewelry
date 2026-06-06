@@ -30,5 +30,25 @@ export class CollectionsComponent implements OnInit {
       keywordsKey: 'seo.collections.keywords',
       image: 'https://www.ochijewelry.com/assets/images/chains.webp'
     });
+
+    this.seo.setSchema({
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      'name': 'Ochi Jewelry Collections',
+      'description': 'Browse our fine jewelry collections: rings, chains, custom jewelry, bracelets, earrings, and pendants.',
+      'mainEntity': {
+        '@type': 'ItemList',
+        'numberOfItems': 7,
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Gold Chains' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Pendants' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Rings' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'Engagement Rings' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Bracelets' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Earrings' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'Custom Jewelry' }
+        ]
+      }
+    });
   }
 }

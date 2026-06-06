@@ -1,0 +1,147 @@
+<!-- ─── Hero ─────────────────────────────────────────────────────────────── -->
+<section class="brand-hero">
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container hero-content">
+    <span class="section-label">✦ Style Guide ✦</span>
+    <h1>Brand Guidelines</h1>
+    <div class="gold-divider"></div>
+    <p>The visual identity, colors, typography, and interactive components of Ochi Jewelry.</p>
+  </div>
+</section>
+
+<!-- ─── Overview ──────────────────────────────────────────────────────────── -->
+<section class="overview-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">01 / BRAND PLATFORM</span>
+      <h2>Identity & Design Principles</h2>
+      <div class="gold-divider"></div>
+      <p>Ochi Jewelry stands for luxury, heritage, and precision. Our visual identity balances classic elegance (traditional serifs, deep obsidian backgrounds) with modern interactions (subtle micro-animations, glassmorphism, responsive grids).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Colors ────────────────────────────────────────────────────────────── -->
+<section class="colors-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">02 / COLOR PALETTE</span>
+      <h2>Brand Color Swatches</h2>
+      <div class="gold-divider"></div>
+      <p>Click on any swatch card to copy its Hex code to your clipboard.</p>
+    </div>
+
+    <div class="colors-grid">
+      @for (c of colors; track c.name) {
+        <div class="color-card glass-card" (click)="copyColor(c.hex)">
+          <div class="swatch" [style.background-color]="c.hex">
+            <span class="copy-badge" [class.dark-text]="c.darkText">
+              @if (copiedColor() === c.hex) {
+                ✓ Copied!
+              } @else {
+                Click to Copy
+              }
+            </span>
+          </div>
+          <div class="color-info">
+            <h3>{{ c.name }}</h3>
+            <div class="color-values">
+              <code>{{ c.hex }}</code>
+              <code>{{ c.var }}</code>
+            </div>
+            <p>{{ c.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ─── Typography ────────────────────────────────────────────────────────── -->
+<section class="typography-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">03 / TYPOGRAPHY</span>
+      <h2>Font System</h2>
+      <div class="gold-divider"></div>
+      <p>Our pairing combines classic editorial elegance with modern digital legibility.</p>
+    </div>
+
+    <div class="typo-grid">
+      <!-- Display Specimen -->
+      <div class="typo-card display-specimen glass-card">
+        <span class="specimen-label">Display Face (Cormorant Garamond)</span>
+        <div class="specimen-letters">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</div>
+        <div class="specimen-detail">
+          <h3>Cormorant Garamond</h3>
+          <p>Used primarily for hero banners, page headers, section titles, and key branding items. Regulates spacing, regality, and traditional luxury.</p>
+          <div class="specimen-samples">
+            <h1>h1 Hero Headline (64px)</h1>
+            <h2>h2 Section Title (40px)</h2>
+            <h3>h3 Component Title (24px)</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Body Specimen -->
+      <div class="typo-card body-specimen glass-card">
+        <span class="specimen-label">Body Face (Inter)</span>
+        <div class="specimen-letters">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</div>
+        <div class="specimen-detail">
+          <h3>Inter Sans</h3>
+          <p>Used for descriptions, body text, navigation bars, buttons, form controls, and metadata. Highly legible on all digital viewports, particularly at small scale.</p>
+          <div class="specimen-samples">
+            <p class="sample-lead">Lead Paragraph (18px) — Used for sub-headers and summaries.</p>
+            <p class="sample-body">Body Copy (15px) — Standard text block size. Written in Inter, regular weight, with 1.6-1.8 line height for optimal legibility.</p>
+            <p class="sample-small">Small / Caption Copy (12px) — Used for section labels, timestamps, and badges.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── UI Showcase ───────────────────────────────────────────────────────── -->
+<section class="ui-section section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">04 / UI COMPONENTS</span>
+      <h2>Interactive Design Elements</h2>
+      <div class="gold-divider"></div>
+      <p>Standardized components that define the user experience and interface of the Ochi Jewelry website.</p>
+    </div>
+
+    <div class="ui-grid">
+      <!-- Buttons -->
+      <div class="ui-card glass-card">
+        <h3>Buttons & States</h3>
+        <div class="gold-divider" style="margin: 0.5rem 0 1.5rem 0;"></div>
+        <div class="component-showcase">
+          <div class="showcase-item">
+            <span>Primary Button</span>
+            <button class="btn-primary"><span>Primary Button</span></button>
+          </div>
+          <div class="showcase-item">
+            <span>Outline Button</span>
+            <button class="btn-outline"><span>Outline Button</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Hover -->
+      <div class="ui-card glass-card">
+        <h3>Card & Hover States</h3>
+        <div class="gold-divider" style="margin: 0.5rem 0 1.5rem 0;"></div>
+        <div class="component-showcase">
+          <div class="card-demo glass-card">
+            <div class="card-demo-icon">💎</div>
+            <h4>Premium Showcase</h4>
+            <p>Hover over this card to preview the gold border glow, backdrop filter blur transitions, and depth shadows.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

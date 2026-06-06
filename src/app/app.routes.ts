@@ -26,5 +26,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/contact/contact').then(m => m.ContactComponent),
     title: 'Contact Us | Ochi Jewelry',
   },
+  {
+    path: 'brand',
+    loadComponent: () => import('./pages/brand/brand').then(m => m.BrandComponent),
+    title: 'Brand Guidelines | Ochi Jewelry',
+  },
   { path: '**', redirectTo: '' },
 ];

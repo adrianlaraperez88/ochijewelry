@@ -24,6 +24,25 @@ export class ContactComponent implements OnInit {
       keywordsKey: 'seo.contact.keywords',
       image: 'https://www.ochijewelry.com/assets/images/logo.webp'
     });
+
+    this.seo.setSchema({
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      'mainEntity': {
+        '@type': 'LocalBusiness',
+        'name': 'Ochi Jewelry',
+        'telephone': '+15025392085',
+        'email': 'info@ochijewelry.com',
+        'address': {
+          '@type': 'PostalAddress',
+          'streetAddress': '2800 Hikes Ln',
+          'addressLocality': 'Louisville',
+          'addressRegion': 'KY',
+          'postalCode': '40218',
+          'addressCountry': 'US'
+        }
+      }
+    });
   }
 
   onSubmit() {
