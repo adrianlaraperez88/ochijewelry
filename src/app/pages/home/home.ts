@@ -29,15 +29,15 @@ export class HomeComponent implements OnInit {
       titleKey: 'seo.home.title',
       descriptionKey: 'seo.home.desc',
       keywordsKey: 'seo.home.keywords',
-      image: 'https://www.ochijewelry.com/assets/images/hero.png'
+      image: 'https://www.ochijewelry.com/assets/images/hero.webp'
     });
 
     this.seo.setSchema({
       '@context': 'https://schema.org',
       '@type': 'JewelryStore',
       'name': 'Ochi Jewelry',
-      'image': 'https://www.ochijewelry.com/assets/images/hero.png',
-      'logo': 'https://www.ochijewelry.com/assets/images/logo.png',
+      'image': 'https://www.ochijewelry.com/assets/images/hero.webp',
+      'logo': 'https://www.ochijewelry.com/assets/images/logo.webp',
       '@id': 'https://www.ochijewelry.com/#store',
       'url': 'https://www.ochijewelry.com/',
       'telephone': '+15025392085',

@@ -11,8 +11,8 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class PromoComponent {
   promos = [
-    { key: 'ring',     img: 'promo-ring.png',     badge: 'badge_sale' },
-    { key: 'necklace', img: 'promo-necklace.png', badge: 'badge_limited' },
-    { key: 'bracelet', img: 'promo-bracelet.png', badge: 'badge_new' },
+    { key: 'ring',     img: 'promo-ring.webp',     badge: 'badge_sale' },
+    { key: 'necklace', img: 'promo-necklace.webp', badge: 'badge_limited' },
+    { key: 'bracelet', img: 'promo-bracelet.webp', badge: 'badge_new' },
   ];
 }

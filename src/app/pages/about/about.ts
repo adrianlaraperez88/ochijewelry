@@ -31,7 +31,7 @@ export class AboutComponent implements OnInit {
       titleKey: 'seo.about.title',
       descriptionKey: 'seo.about.desc',
       keywordsKey: 'seo.about.keywords',
-      image: 'https://www.ochijewelry.com/assets/images/store.png'
+      image: 'https://www.ochijewelry.com/assets/images/store.webp'
     });
   }
 }

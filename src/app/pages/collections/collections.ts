@@ -14,13 +14,13 @@ export class CollectionsComponent implements OnInit {
   private seo = inject(SEOService);
 
   categories = [
-    { key: 'chains',    img: 'chains.png',    icon: '⛓️' },
-    { key: 'pendants',  img: 'pendants.png',  icon: '💫' },
-    { key: 'rings',     img: 'rings.png',     icon: '💍' },
-    { key: 'engagement',img: 'rings.png',     icon: '💎' },
-    { key: 'bracelets', img: 'bracelets.png', icon: '✨' },
-    { key: 'earrings',  img: 'earrings.png',  icon: '🌟' },
-    { key: 'custom',    img: 'custom.png',    icon: '🎨' },
+    { key: 'chains',    img: 'chains.webp',    icon: '⛓️' },
+    { key: 'pendants',  img: 'pendants.webp',  icon: '💫' },
+    { key: 'rings',     img: 'rings.webp',     icon: '💍' },
+    { key: 'engagement',img: 'rings.webp',     icon: '💎' },
+    { key: 'bracelets', img: 'bracelets.webp', icon: '✨' },
+    { key: 'earrings',  img: 'earrings.webp',  icon: '🌟' },
+    { key: 'custom',    img: 'custom.webp',    icon: '🎨' },
   ];
 
   ngOnInit() {
@@ -28,7 +28,7 @@ export class CollectionsComponent implements OnInit {
       titleKey: 'seo.collections.title',
       descriptionKey: 'seo.collections.desc',
       keywordsKey: 'seo.collections.keywords',
-      image: 'https://www.ochijewelry.com/assets/images/chains.png'
+      image: 'https://www.ochijewelry.com/assets/images/chains.webp'
     });
   }
 }

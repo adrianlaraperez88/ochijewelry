@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
       titleKey: 'seo.contact.title',
       descriptionKey: 'seo.contact.desc',
       keywordsKey: 'seo.contact.keywords',
-      image: 'https://www.ochijewelry.com/assets/images/logo.png'
+      image: 'https://www.ochijewelry.com/assets/images/logo.webp'
     });
   }
 

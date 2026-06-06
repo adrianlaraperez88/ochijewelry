@@ -40,7 +40,7 @@ export class ServicesComponent implements OnInit {
       titleKey: 'seo.services.title',
       descriptionKey: 'seo.services.desc',
       keywordsKey: 'seo.services.keywords',
-      image: 'https://www.ochijewelry.com/assets/images/services-hero.png'
+      image: 'https://www.ochijewelry.com/assets/images/services-hero.webp'
     });
 
     this.seo.setSchema({
