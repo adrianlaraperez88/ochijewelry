@@ -8,7 +8,7 @@
   },
   "hero": {
     "tagline": "Where Elegance Meets Craftsmanship",
-    "subtitle": "Exquisite jewelry for life's most precious moments",
+    "subtitle": "Jewelry that conveys elegance, confidence and exclusivity for life's most precious moments",
     "cta_shop": "Explore Collections",
     "cta_services": "Our Services",
     "stats": {
@@ -44,7 +44,7 @@
       },
       "bracelets": {
         "name": "Bracelets",
-        "desc": "Gold guillos, bangles and luxury bracelets"
+        "desc": "Gold chain bracelets, bangles and luxury bracelets"
       },
       "earrings": {
         "name": "Earrings",
@@ -78,8 +78,8 @@
         "discount": "Exclusive Offer"
       },
       "bracelet": {
-        "name": "Bracelets & Guillos",
-        "desc": "Guillos and bracelets for every occasion",
+        "name": "Bracelets & Bangles",
+        "desc": "Bangles and bracelets for every occasion",
         "discount": "Exclusive Offer"
       }
     }
