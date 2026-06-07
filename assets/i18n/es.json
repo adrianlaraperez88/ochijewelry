@@ -8,7 +8,7 @@
   },
   "hero": {
     "tagline": "Donde la Elegancia se Une a la Artesanía",
-    "subtitle": "Joyería exquisita para los momentos más preciados de tu vida",
+    "subtitle": "Joyería que transmite elegancia, confianza y exclusividad para los momentos más preciados de tu vida",
     "cta_shop": "Explorar Colecciones",
     "cta_services": "Nuestros Servicios",
     "stats": {
@@ -43,8 +43,8 @@
         "desc": "Di para siempre con nuestras colecciones nupciales"
       },
       "bracelets": {
-        "name": "Pulseras y Guillos",
-        "desc": "Guillos de oro, brazaletes y pulseras de lujo"
+        "name": "Pulseras y Brazaletes",
+        "desc": "Brazaletes de oro, pulseras rígidas y pulseras de lujo"
       },
       "earrings": {
         "name": "Aretes",
@@ -70,17 +70,17 @@
       "ring": {
         "name": "Anillos de Compromiso",
         "desc": "Diseños exclusivos en oro 18k y diamantes certificados",
-        "discount": "Offerta Especial"
+        "discount": "Oferta Especial"
       },
       "necklace": {
         "name": "Cadenas y Collares",
         "desc": "Cadenas en oro amarillo, blanco y rosado",
-        "discount": "Offerta Especial"
+        "discount": "Oferta Especial"
       },
       "bracelet": {
-        "name": "Pulseras y Guillos",
-        "desc": "Guillos y pulseras para toda ocasión",
-        "discount": "Offerta Especial"
+        "name": "Pulseras y Brazaletes",
+        "desc": "Brazaletes y pulseras para toda ocasión",
+        "discount": "Oferta Especial"
       }
     }
   },
