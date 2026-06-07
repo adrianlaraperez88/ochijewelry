@@ -107,21 +107,15 @@ export class HomeComponent implements OnInit {
         'openingHoursSpecification': [
           {
             '@type': 'OpeningHoursSpecification',
-            'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
             'opens': '09:00',
             'closes': '19:00'
-          },
-          {
-            '@type': 'OpeningHoursSpecification',
-            'dayOfWeek': 'Sunday',
-            'opens': '11:00',
-            'closes': '16:00'
           }
         ],
         'sameAs': [
           'https://www.instagram.com/ochijewelry',
           'https://www.facebook.com/ochijewelry',
-          'https://wa.me/13055550190'
+          'https://wa.me/15029562317'
         ]
       });
     });
