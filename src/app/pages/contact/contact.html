@@ -84,7 +84,10 @@
           <div class="info-icon">📞</div>
           <div>
             <h4>{{ 'contact.info.phone_title' | translate }}</h4>
-            <p><a href="tel:+15029562317">{{ 'contact.info.phone' | translate }}</a></p>
+            <p>
+              <a href="tel:{{ 'contact.info.main_phone_raw' | translate }}">{{ 'contact.info.main_phone' | translate }}</a><br>
+              <a href="tel:{{ 'contact.info.secondary_phone_raw' | translate }}">{{ 'contact.info.secondary_phone' | translate }}</a>
+            </p>
           </div>
         </div>
         <div class="info-item">

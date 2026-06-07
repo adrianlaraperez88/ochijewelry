@@ -49,7 +49,10 @@
       </div>
       <div class="contact-item">
         <span class="icon">📞</span>
-        <span><a href="tel:+15029562317">{{ 'contact.info.phone' | translate }}</a></span>
+        <span>
+          <a href="tel:{{ 'contact.info.main_phone_raw' | translate }}">{{ 'contact.info.main_phone' | translate }}</a> / 
+          <a href="tel:{{ 'contact.info.secondary_phone_raw' | translate }}">{{ 'contact.info.secondary_phone' | translate }}</a>
+        </span>
       </div>
       <div class="contact-item">
         <span class="icon">✉️</span>

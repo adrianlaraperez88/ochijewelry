@@ -131,6 +131,7 @@ export class CollectionsComponent implements OnInit {
              `- Piedra: ${stone}`;
     }
 
-    return `https://wa.me/15025392085?text=${encodeURIComponent(text)}`;
+    const whatsappPhone = this.translate.instant('contact.info.whatsapp_phone') || '15025392085';
+    return `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(text)}`;
   }
 }
