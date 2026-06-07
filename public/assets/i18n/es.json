@@ -210,10 +210,10 @@
       "location": "Ubicación",
       "address": "2800 Hikes Ln, Louisville, KY 40218",
       "hours_title": "Horario",
-      "hours": "Lun – Sáb: 9:00 AM – 7:00 PM",
-      "hours2": "Domingo: 11:00 AM – 4:00 PM",
+      "hours": "Lunes – Domingo: 9:00 AM – 7:00 PM",
+      "hours2": "",
       "phone_title": "Teléfono",
-      "phone": "+1 (502) 539-2085",
+      "phone": "+1 (502) 956-2317 / +1 (502) 539-2085",
       "email_title": "Correo",
       "email": "info@ochijewelry.com"
     }
