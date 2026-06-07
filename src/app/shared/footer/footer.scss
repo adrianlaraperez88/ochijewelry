@@ -152,6 +152,27 @@
     color: var(--color-text-muted);
     line-height: 1.5;
   }
+
+  .footer-phones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    p {
+      margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.5;
+
+      a {
+        color: var(--color-text-muted);
+        transition: var(--transition-fast);
+
+        &:hover {
+          color: var(--color-gold);
+        }
+      }
+    }
+  }
 }
 
 // Bottom bar

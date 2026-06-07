@@ -49,7 +49,12 @@
       </div>
       <div class="contact-item">
         <span class="icon">📞</span>
-        <span>{{ 'contact.info.phone' | translate }}</span>
+        <div class="footer-phones">
+          <p><a href="tel:+15029562317">+1 (502) 956-2317</a></p>
+          @if (currentLang() === 'es') {
+            <p><a href="tel:+15025392085">+1 (502) 539-2085</a></p>
+          }
+        </div>
       </div>
       <div class="contact-item">
         <span class="icon">✉️</span>
