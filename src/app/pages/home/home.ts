@@ -36,19 +36,21 @@ export class HomeComponent implements OnInit {
     this.translate.get([
       'contact.info.address',
       'contact.info.phone',
-      'contact.info.email'
+      'contact.info.email',
+      'contact.info.whatsapp_phone'
     ]).subscribe(res => {
       const addressVal = res['contact.info.address'] || '';
       const phoneVal = res['contact.info.phone'] || '';
       const emailVal = res['contact.info.email'] || '';
-
+      const whatsappPhone = res['contact.info.whatsapp_phone'] || '15025392085';
+ 
       const addrParts = addressVal.split(',');
       const street = addrParts[0]?.trim() || '';
       const city = addrParts[1]?.trim() || '';
       const stateZip = addrParts[2]?.trim().split(' ') || [];
       const state = stateZip[0] || '';
       const zip = stateZip[1] || '';
-
+ 
       this.seo.setSchema({
         '@context': 'https://schema.org',
         '@type': 'JewelryStore',
@@ -115,7 +117,7 @@ export class HomeComponent implements OnInit {
         'sameAs': [
           'https://www.instagram.com/ochijewelry',
           'https://www.facebook.com/ochijewelry',
-          'https://wa.me/15029562317'
+          `https://wa.me/${whatsappPhone}`
         ]
       });
     });

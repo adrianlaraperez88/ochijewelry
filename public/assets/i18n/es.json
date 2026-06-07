@@ -213,7 +213,12 @@
       "hours": "Lunes – Domingo: 9:00 AM – 7:00 PM",
       "hours2": "",
       "phone_title": "Teléfono",
-      "phone": "+1 (502) 956-2317 / +1 (502) 539-2085",
+      "phone": "+1 (502) 539-2085 / +1 (502) 956-2317",
+      "main_phone": "+1 (502) 539-2085",
+      "main_phone_raw": "+15025392085",
+      "secondary_phone": "+1 (502) 956-2317",
+      "secondary_phone_raw": "+15029562317",
+      "whatsapp_phone": "15025392085",
       "email_title": "Correo",
       "email": "info@ochijewelry.com"
     }

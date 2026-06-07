@@ -113,7 +113,7 @@ Metals feature circular swatches with realistic radial light reflections instead
 
 ### 5.2 Summary Actions (`.summary-actions`)
 *   **Buttons:** Side-by-side flex layout (Desktop). Stacks vertically on screen widths `<580px>` with full-width buttons.
-*   **Redirection Link (`.customizer-submit`):** Compiles selection keys, maps them to dynamic languages (Spanish/English), builds a URI-encoded string, and redirects to a dedicated WhatsApp API link (`https://wa.me/15029562317?text=...`) in a new tab.
+*   **Redirection Link (`.customizer-submit`):** Compiles selection keys, maps them to dynamic languages (Spanish/English), builds a URI-encoded string, and redirects to a dedicated WhatsApp API link (`https://wa.me/{{ 'contact.info.whatsapp_phone' | translate }}?text=...`) in a new tab.
 
 ---
 
