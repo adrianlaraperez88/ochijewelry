@@ -115,7 +115,7 @@ export class HomeComponent implements OnInit {
         'sameAs': [
           'https://www.instagram.com/ochijewelry',
           'https://www.facebook.com/ochijewelry',
-          'https://wa.me/15029562317'
+          'https://wa.me/15025392085'
         ]
       });
     });

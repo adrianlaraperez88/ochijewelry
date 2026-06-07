@@ -131,6 +131,6 @@ export class CollectionsComponent implements OnInit {
              `- Piedra: ${stone}`;
     }
 
-    return `https://wa.me/15029562317?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/15025392085?text=${encodeURIComponent(text)}`;
   }
 }
